@@ -1,0 +1,1038 @@
+-- Hecho Por G0bbyD0llan --
+
+-- Monstrum's Gui to Lua\n-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local GH = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local close = Instance.new("TextButton")
+local Main = Instance.new("Frame")
+local Aimlock = Instance.new("TextButton")
+local ESP = Instance.new("TextButton")
+local Configuracion = Instance.new("TextButton")
+local script_handler = Instance.new("TextLabel")
+local TextBox = Instance.new("TextBox")
+local options = Instance.new("Frame")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local keyAL = Instance.new("TextButton")
+local KeyESP = Instance.new("TextButton")
+local NT = Instance.new("TextButton")
+local Ola = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game:GetService("CoreGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+GH.Name = "GH"
+GH.Parent = ScreenGui
+GH.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+GH.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GH.Position = UDim2.new(0.387275249, 0, 0.25897041, 0)
+GH.Size = UDim2.new(0, 267, 0, 32)
+
+Title.Name = "Title"
+Title.Parent = GH
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Size = UDim2.new(0, 231, 0, 32)
+Title.Font = Enum.Font.Arial
+Title.Text = "  Glock-Hub"
+Title.TextColor3 = Color3.fromRGB(0, 0, 0)
+Title.TextSize = 20.000
+Title.TextWrapped = true
+Title.TextXAlignment = Enum.TextXAlignment.Left
+
+close.Name = "close"
+close.Parent = GH
+close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+close.BackgroundTransparency = 1.000
+close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+close.BorderSizePixel = 0
+close.Position = UDim2.new(0.865168512, 0, 0, 0)
+close.Size = UDim2.new(0, 36, 0, 32)
+close.Font = Enum.Font.Gotham
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(255, 0, 4)
+close.TextScaled = true
+close.TextSize = 14.000
+close.TextWrapped = true
+
+Main.Name = "Main"
+Main.Parent = GH
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.Position = UDim2.new(0, 0, 1, 0)
+Main.Size = UDim2.new(0, 267, 0, 233)
+
+Aimlock.Name = "Aim-lock"
+Aimlock.Parent = Main
+Aimlock.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+Aimlock.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Aimlock.Position = UDim2.new(0.0561797768, 0, 0.0557939932, 0)
+Aimlock.Size = UDim2.new(0, 234, 0, 35)
+Aimlock.Font = Enum.Font.SourceSans
+Aimlock.Text = "Activar Aim-Lock"
+Aimlock.TextColor3 = Color3.fromRGB(255, 255, 255)
+Aimlock.TextScaled = true
+Aimlock.TextSize = 14.000
+Aimlock.TextWrapped = true
+
+ESP.Name = "ESP"
+ESP.Parent = Main
+ESP.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+ESP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ESP.Position = UDim2.new(0.0561797768, 0, 0.240343347, 0)
+ESP.Size = UDim2.new(0, 234, 0, 35)
+ESP.Font = Enum.Font.SourceSans
+ESP.Text = "Activar ESP"
+ESP.TextColor3 = Color3.fromRGB(255, 255, 255)
+ESP.TextScaled = true
+ESP.TextSize = 14.000
+ESP.TextWrapped = true
+
+Configuracion.Name = "Configuracion"
+Configuracion.Parent = Main
+Configuracion.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+Configuracion.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Configuracion.Position = UDim2.new(0.0599250942, 0, 0.811158776, 0)
+Configuracion.Size = UDim2.new(0, 234, 0, 35)
+Configuracion.Font = Enum.Font.SourceSans
+Configuracion.Text = "configuracion"
+Configuracion.TextColor3 = Color3.fromRGB(255, 255, 255)
+Configuracion.TextScaled = true
+Configuracion.TextSize = 14.000
+Configuracion.TextWrapped = true
+
+script_handler.Name = "script_handler"
+script_handler.Parent = Main
+script_handler.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+script_handler.BackgroundTransparency = 0.999
+script_handler.BorderColor3 = Color3.fromRGB(0, 0, 0)
+script_handler.BorderSizePixel = 0
+script_handler.Position = UDim2.new(0.0561797768, 0, 0.618025601, 0)
+script_handler.Size = UDim2.new(0, 233, 0, 39)
+script_handler.Font = Enum.Font.Arial
+script_handler.Text = "[script handler]:"
+script_handler.TextColor3 = Color3.fromRGB(0, 0, 0)
+script_handler.TextSize = 14.000
+script_handler.TextYAlignment = Enum.TextYAlignment.Top
+
+TextBox.Parent = Main
+TextBox.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.Position = UDim2.new(0.0599250942, 0, 0.424892694, 0)
+TextBox.Size = UDim2.new(0, 234, 0, 35)
+TextBox.Font = Enum.Font.Arial
+TextBox.PlaceholderColor3 = Color3.fromRGB(178, 178, 178)
+TextBox.PlaceholderText = "Resolucion aca..."
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+options.Name = "options"
+options.Parent = GH
+options.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+options.BackgroundTransparency = 0.800
+options.BorderColor3 = Color3.fromRGB(0, 0, 0)
+options.BorderSizePixel = 0
+options.Position = UDim2.new(-0.0637655109, 0, -9.53674316e-07, 0)
+options.Size = UDim2.new(0, -267, 0, 265)
+options.ZIndex = -2
+
+Frame.Parent = options
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 0.999
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(1, 0, 0, 0)
+Frame.Size = UDim2.new(0, -264, 0, 265)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(-2.31193781e-07, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 267, 0, 39)
+TextLabel.Font = Enum.Font.Roboto
+TextLabel.Text = "configuracion"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+keyAL.Name = "keyAL"
+keyAL.Parent = Frame
+keyAL.BackgroundColor3 = Color3.fromRGB(71, 168, 64)
+keyAL.BorderColor3 = Color3.fromRGB(0, 0, 0)
+keyAL.BorderSizePixel = 0
+keyAL.Position = UDim2.new(-2.31193781e-07, 0, 0.169811323, 0)
+keyAL.Size = UDim2.new(0, 266, 0, 50)
+keyAL.Font = Enum.Font.Arial
+keyAL.Text = "Tecla para Togglear Aim-Lock [Letra Actual - Q]"
+keyAL.TextColor3 = Color3.fromRGB(0, 0, 0)
+keyAL.TextSize = 22.000
+keyAL.TextStrokeColor3 = Color3.fromRGB(177, 177, 177)
+keyAL.TextStrokeTransparency = 0.000
+keyAL.TextWrapped = true
+
+KeyESP.Name = "KeyESP"
+KeyESP.Parent = Frame
+KeyESP.BackgroundColor3 = Color3.fromRGB(71, 168, 64)
+KeyESP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KeyESP.BorderSizePixel = 0
+KeyESP.Position = UDim2.new(2.31193781e-07, 0, 0.430188686, 0)
+KeyESP.Size = UDim2.new(0, 266, 0, 50)
+KeyESP.Font = Enum.Font.Arial
+KeyESP.Text = "Tecla para Togglear ESP [Letra Actual - E]"
+KeyESP.TextColor3 = Color3.fromRGB(0, 0, 0)
+KeyESP.TextSize = 22.000
+KeyESP.TextStrokeColor3 = Color3.fromRGB(177, 177, 177)
+KeyESP.TextStrokeTransparency = 0.000
+KeyESP.TextWrapped = true
+
+NT.Name = "NT"
+NT.Parent = Frame
+NT.BackgroundColor3 = Color3.fromRGB(168, 61, 63)
+NT.BorderColor3 = Color3.fromRGB(0, 0, 0)
+NT.BorderSizePixel = 0
+NT.Position = UDim2.new(-0.00757598877, 0, 0.879245281, 0)
+NT.Size = UDim2.new(0, 266, 0, 32)
+NT.Font = Enum.Font.Arial
+NT.Text = "Notificar Target [Aim-Lock]"
+NT.TextColor3 = Color3.fromRGB(0, 0, 0)
+NT.TextSize = 22.000
+NT.TextStrokeColor3 = Color3.fromRGB(177, 177, 177)
+NT.TextStrokeTransparency = 0.000
+NT.TextWrapped = true
+
+Ola.Name = "Ola"
+Ola.Parent = Frame
+Ola.BackgroundColor3 = Color3.fromRGB(71, 168, 64)
+Ola.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Ola.BorderSizePixel = 0
+Ola.Position = UDim2.new(-0.00757598877, 0, 0.690566063, 0)
+Ola.Size = UDim2.new(0, 266, 0, 50)
+Ola.Font = Enum.Font.Arial
+Ola.Text = "Tecla para Togglear Menu [Letra Actual - G + H]"
+Ola.TextColor3 = Color3.fromRGB(0, 0, 0)
+Ola.TextSize = 22.000
+Ola.TextStrokeColor3 = Color3.fromRGB(177, 177, 177)
+Ola.TextStrokeTransparency = 0.000
+Ola.TextWrapped = true
+
+-- Scripts:
+
+local function TFMJ_script() -- GH.Menu-Handler 
+	local script = Instance.new('LocalScript', GH)
+
+	-----------------------------------------------------------------------------------------
+	
+	
+	--Load Dragging system
+	task.spawn(function()
+		
+		local UserInputService = game:GetService("UserInputService")
+	
+		local gui = script.Parent
+	
+		local dragging
+		local dragInput
+		local dragStart
+		local startPos
+	
+		local function update(input)
+			local delta = input.Position - dragStart
+			gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		end
+	
+		gui.InputBegan:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+				dragging = true
+				dragStart = input.Position
+				startPos = gui.Position
+	
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragging = false
+					end
+				end)
+			end
+		end)
+	
+		gui.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+	
+		UserInputService.InputChanged:Connect(function(input)
+			if input == dragInput and dragging then
+				update(input)
+			end
+		end)
+		
+	end)
+	--load close script function
+	task.spawn(function()
+		script.Parent.close.MouseButton1Click:Connect(function()
+			script.Parent:Destroy()
+		end)
+		
+		script.Parent.close.MouseEnter:Connect(function()
+			script.Parent.close.TextColor3 = Color3.new(1, 0.615686, 0.623529)
+		end)
+		script.Parent.close.MouseLeave:Connect(function()
+			script.Parent.close.TextColor3 = Color3.new(1, 0, 0)
+		end)
+	end)
+	
+	--load a Hide-Open system by pressing keys "G" And "H" (toggling Script.parent.Visible)
+	task.spawn(function()
+		local UserInputService = game:GetService("UserInputService")
+		local gui = script.Parent
+		local key1 = Enum.KeyCode.G
+		local key2 = Enum.KeyCode.H
+		local on = false
+	
+		-- Tabla para rastrear qué teclas están presionadas
+		local keysPressed = {}
+	
+	local inputB = 	UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+			if gameProcessedEvent then return end
+			if input.KeyCode == key1 or input.KeyCode == key2 then
+				keysPressed[input.KeyCode] = true
+	
+				-- Si ambas teclas están presionadas, cambiar visibilidad
+				if keysPressed[key1] and keysPressed[key2] then
+					on = not on
+					gui.Visible = on
+				end
+			end
+		end)
+	
+	local InputE = 	UserInputService.InputEnded:Connect(function(input)
+			-- Cuando se suelta una tecla, se elimina de la tabla
+			if input.KeyCode == key1 or input.KeyCode == key2 then
+				keysPressed[input.KeyCode] = nil
+			end
+	end)
+	
+		local KeySelectedA = script.Parent.options.Frame.Ola:WaitForChild("SelectedKey")
+		print("Glock hub - KeySelected Value Found For Menu Toggle")
+		KeySelectedA.Changed:Connect(function()
+			print("Glock hub - KeySelected Value has been changed, Disconnecting Every Input...")
+		InputE:Disconnect()
+		inputB:Disconnect()
+		task.spawn(function()
+				print("Glock hub - Spawning New InputEnded for KeySelectedA.Name")
+		UserInputService.InputEnded:Connect(function(input)
+				if input.KeyCode == Enum.KeyCode[KeySelectedA.Value] then
+					on = not on
+					gui.Visible = on
+				end
+			end)
+		end)
+		end)
+	end)
+	--Inicializate Bindables
+	task.spawn(function()
+	local Avisar = Instance.new("BindableEvent", script["Parent"]["Main"].script_handler)
+	Avisar.Name = "Avisar"
+	local Animacion = Instance.new("BindableEvent", script["Parent"]["options"])
+	Animacion.Name = "Animacion"
+	local Notificacion = Instance.new("BindableEvent", script["Parent"]["Main"])
+	Notificacion.Name = "Notificacion"
+	end) 
+	
+	--inicializate BoolBalues
+	task.spawn(function()
+	local Aim_lock_Active = Instance.new("BoolValue", script["Parent"]["Main"]["Aim-lock"])
+	Aim_lock_Active.Name = "Activee"
+		local ESP_ACTIVE = Instance.new("BoolValue", script["Parent"]["Main"]["ESP"])
+		ESP_ACTIVE.Name = "Activee"
+	end)
+	--[[---------------------------------------------------------------------------------------
+	                                Load Script HANDLER [Aim-Lock and ESP]
+	                                
+	]]
+	
+	local BoolValues = {
+	Aim_Lock = false,
+	ESP = false
+	}
+	
+	-- Aim-Lock and ESP System
+	task.spawn(function()
+		local UserInputService = game:GetService("UserInputService")
+		local Players = game:GetService("Players")
+		local Camera = workspace.CurrentCamera
+		local LocalPlayer = Players.LocalPlayer
+		local target = nil
+		local Active_AL = false
+		local function getClosestPlayerToMouse()
+			local mouseLocation = UserInputService:GetMouseLocation()
+			local closestPlayer, closestDist = nil, math.huge
+	
+			for _, player in pairs(Players:GetPlayers()) do
+				if player ~= LocalPlayer and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+					local rootPart = player.Character.HumanoidRootPart
+					local screenPos, onScreen = Camera:WorldToViewportPoint(rootPart.Position)
+					if onScreen then
+						local distance = (Vector2.new(screenPos.X, screenPos.Y) - mouseLocation).Magnitude
+						if distance < closestDist then
+							closestDist = distance
+							closestPlayer = player
+						end
+					end
+				end
+			end
+			return closestPlayer
+		end
+		local IsNTActive = function()
+			return script.Parent.options.Frame.NT:FindFirstChild("IsActive").Value
+		end
+		UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+			if gameProcessedEvent then return end
+			if input.KeyCode == Enum.KeyCode[tostring(script.Parent.options.Frame.keyAL["SelectedKey"].Value)] then
+				if not BoolValues.Aim_Lock then return end
+				Active_AL = not Active_AL
+				if Active_AL then
+					target = getClosestPlayerToMouse()
+					if target and target.Character and target.Character:FindFirstChild("HumanoidRootPart") then
+						if IsNTActive() then
+						--notify about the selected target using StarterGui:SetCore
+							game.StarterGui:SetCore("SendNotification", {
+								Title = "Aim Lock",
+								Text = "Target Locked: " .. target.Name,
+								Duration = 3
+							})
+						end
+						local rootPart = target.Character.HumanoidRootPart
+						while BoolValues.Aim_Lock and Active_AL and task.wait() do
+							Camera.CFrame = CFrame.new(Camera.CFrame.Position, rootPart.Position)
+						end
+					end
+				end
+			end
+		end)
+	end)
+	
+	-- ESP System usando Highlight en lugar de Drawing API
+	
+	task.spawn(function()
+		local Players = game:GetService("Players")
+		local RunService = game:GetService("RunService")
+		local UserInputService = game:GetService("UserInputService")
+		local ESP_Enabled = false
+		local ESP_Highlights = {}
+	
+		-- Función para crear el ESP usando Highlight
+		local function createESPHighlight(character)
+			local highlight = Instance.new("Highlight")
+			highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+			highlight.Enabled = ESP_Enabled and BoolValues.ESP -- Solo activado si BoolValues.ESP es true
+			highlight.Parent = character
+			return highlight
+		end
+	
+		-- Función para manejar los jugadores y asignar el Highlight
+		local function updateESP()
+			for _, player in pairs(Players:GetPlayers()) do
+				if player.Character then
+					if not ESP_Highlights[player] then
+						ESP_Highlights[player] = createESPHighlight(player.Character)
+					end
+					-- Actualizar estado del Highlight basado en BoolValues.ESP
+					ESP_Highlights[player].Enabled = ESP_Enabled and BoolValues.ESP
+				end
+			end
+		end
+	
+		-- Toggle del ESP con una tecla
+		UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+			if gameProcessedEvent then return end
+			if input.KeyCode == Enum.KeyCode[tostring(script.Parent.options.Frame.KeyESP["SelectedKey"].Value)] then
+				ESP_Enabled = not ESP_Enabled
+				for _, highlight in pairs(ESP_Highlights) do
+					if highlight then
+						highlight.Enabled = ESP_Enabled and BoolValues.ESP
+					end
+				end
+			end
+		end)
+	
+		-- Loop para actualizar ESP
+		RunService.RenderStepped:Connect(updateESP)
+	
+		-- Escuchar cambios en BoolValues.ESP
+		local Activee_ESP = script.Parent.Main["ESP"]:FindFirstChildOfClass("BoolValue")
+		if Activee_ESP and Activee_ESP.Name == "Activee" then
+			Activee_ESP.Changed:Connect(function(value)
+				BoolValues.ESP = value
+				-- Actualizar el estado de todos los highlights cuando BoolValues.ESP cambie
+				for _, highlight in pairs(ESP_Highlights) do
+					if highlight then
+						highlight.Enabled = ESP_Enabled and BoolValues.ESP
+					end
+				end
+			end)
+		end
+	end)
+	
+	
+	local Activee_AL = script.Parent.Main["Aim-lock"]:FindFirstChildOfClass("BoolValue")
+	if Activee_AL.Name == "Activee" then
+	Activee_AL.Changed:Connect(function(value)
+	BoolValues.Aim_Lock = value
+	end)
+	end
+	local Activee_ESP =  script.Parent.Main["ESP"]:FindFirstChildOfClass("BoolValue")
+	if Activee_ESP.Name == "Activee" then
+	Activee_ESP.Changed:Connect(function(value)
+	BoolValues.ESP = value
+	end)
+	end
+end
+coroutine.wrap(TFMJ_script)()
+local function AMZUG_script() -- Main.Handlers 
+	local script = Instance.new('LocalScript', Main)
+
+	-- Variables activas
+	local Active = {
+		Aim_Lock = false,
+		ESP = false
+	}
+	
+	-- Obtener el BindableEvent
+	local Avisar = script.Parent.script_handler:WaitForChild("Avisar")
+	
+	-- Botones
+	local Aim_LockBT = script.Parent["Aim-lock"]
+	local ESP_BT = script.Parent["ESP"]
+	local ConfiguracionBT = script.Parent["Configuracion"]
+	local Res = script.Parent["TextBox"]
+	-- Función para alternar estados
+	local function toggle(name)
+		if Active[name] == nil then
+			warn("Intentando cambiar '"..name.."', pero no existe en Active.")
+			return
+		end
+	
+	
+		Active[name] = not Active[name] -- Alternar entre true y false
+		print(name.." ha sido toggleado a "..tostring(Active[name]))
+	
+		if name == "Aim_Lock" then
+			Aim_LockBT.Activee.Value = Active[name]
+		elseif name == "ESP" then
+			ESP_BT.Activee.Value = Active[name]
+		end
+		
+		-- Disparar el evento
+		if Avisar then
+			print("Disparando evento con args: "..name..", "..tostring(Active[name]))
+			Avisar:Fire(name, Active[name]) -- 🔥 Usar `Fire()` en lugar de `FireServer()`
+		else
+			warn("No se encontró el BindableEvent 'Avisar' en StarterGui.")
+		end
+	end
+	
+	-- Conectar botones con la función toggle
+	Aim_LockBT.MouseButton1Click:Connect(function()
+		toggle("Aim_Lock")
+	end)
+	
+	ESP_BT.MouseButton1Click:Connect(function()
+		toggle("ESP")
+	end)
+	
+	ConfiguracionBT.MouseButton1Click:Connect(function()
+		script.Parent.Parent.options.Animacion:Fire(script.Parent.Parent.options.Visible and "Cerrado" or "Abierto")
+	end)
+	--SCRIPT PARA RESOLUCION------------------------
+	local RunService = game:GetService("RunService")
+	local Camera = workspace.CurrentCamera
+	local SquishConnection
+	local function onFocusLost()
+		local inputText = Res.Text:lower() -- Convertir a minúsculas para detectar "def" sin importar el formato
+		local Squish = tonumber(inputText) -- Intentar convertirlo a número
+	
+		-- Si el usuario ingresa "def" o deja el campo vacío, establecer Squish en 1
+		if inputText == "def" or inputText == "" then
+			local Notificacion = script.Parent:WaitForChild("Notificacion")
+			--Notificar sobre los cambios
+			if Notificacion:IsA("BindableEvent") then
+				Notificacion:Fire("Aviso: ", "Texto No Disponible" ,Color3.new(0, 0.666667, 0.588235), "Aviso")
+	
+			end
+			Squish = 1
+		elseif not Squish or Squish < 0 then
+			-- Notificar al usuario si el número ingresado es inválido
+			local Notificacion = script.Parent:WaitForChild("Notificacion")
+			--Notificar sobre los cambios
+			if Notificacion:IsA("BindableEvent") then
+				Notificacion:Fire("Error: ", "El número debe estar entre 0 y 1" ,Color3.new(0.666667, 0, 0), "Error")
+	
+			end
+			Squish = 1
+		elseif Squish > 1 then
+			local Notificacion = script.Parent:WaitForChild("Notificacion")
+			--Notificar sobre los cambios
+			if Notificacion:IsA("BindableEvent") then
+				Notificacion:Fire("Error: ", "El número esta demasiado elevado." ,Color3.new(0.666667, 0, 0), "Error")
+	
+			end
+			Squish = 1
+		end
+	
+		-- Asegurar que no se conecten múltiples funciones
+		if SquishConnection then
+			SquishConnection:Disconnect()
+		end
+	
+		SquishConnection = RunService.RenderStepped:Connect(function()
+			local MAGIC_FORMULA = CFrame.new(0, 0, 0, 1, 0, 0, 0, Squish, 0, 0, 0, 1)
+			Camera.CFrame = Camera.CFrame * MAGIC_FORMULA
+		end)
+	end
+	
+	Res.FocusLost:Connect(onFocusLost)
+	----------------------------------------------
+end
+coroutine.wrap(AMZUG_script)()
+local function WPBRZY_script() -- script_handler.AvisarHandler 
+	local script = Instance.new('LocalScript', script_handler)
+
+	local Avisar = script.Parent:WaitForChild("Avisar") -- Esto es un RemoteEvent dentro del script.Parent
+	local ScriptHandler = script.Parent -- Debe ser un TextLabel
+	
+	-- Verificar si ScriptHandler es un TextLabel y activar RichText
+	if not ScriptHandler:IsA("TextLabel") then
+		warn("ScriptHandler no es un TextLabel, verifica su ubicación.")
+		return
+	else
+		ScriptHandler.RichText = true
+	end
+	
+	-- Función para actualizar el texto en pantalla
+	local function ActualizarTexto(texto)
+		ScriptHandler.Text = texto
+	end
+	
+	-- Función para colorear texto con RichText
+	local function Colorear(texto, color)
+		return string.format('<font color="%s"><b>%s</b></font>', color, texto)
+	end
+	
+	-- Lista de valores booleanos activos
+	local BoolValues = {
+		Aim_Lock = false,
+		ESP = false
+	}
+	
+	-- Función para formatear el texto con colores correctos
+	local function FormatearTexto()
+		ActualizarTexto(string.format([[
+	Aim-Lock = %s
+	ESP = %s
+	]],
+			Colorear(BoolValues["Aim_Lock"] and "Habilitado" or "Deshabilitado", BoolValues["Aim_Lock"] and "#00FF00" or "#FF0000"),
+			Colorear(BoolValues["ESP"] and "Habilitado" or "Deshabilitado", BoolValues["ESP"] and "#00FF00" or "#FF0000")
+			))
+	end
+	
+	-- Iniciar texto formateado
+	FormatearTexto()
+	
+	-- Escuchar el evento del BindableEvent
+	if Avisar then
+		Avisar.Event:Connect(function(Name, State)
+			print("Se recibió una llamada con las siguientes ARGS: "..Name.." / "..tostring(State))
+	
+			if BoolValues[Name] ~= nil then
+			
+				BoolValues[Name] = State
+				FormatearTexto()
+			else
+				warn("La variable '"..Name.."' no ha sido encontrada.")
+			end
+		end)
+	else
+		warn("No se encontró el BindableEvent 'Avisar' en StarterGui.")
+	end
+end
+coroutine.wrap(WPBRZY_script)()
+local function TKZFXPL_script() -- Main.LocalScript 
+	local script = Instance.new('LocalScript', Main)
+
+	local Notificaciones = {
+		Error = "rbxassetid://4041673253",
+		Aviso = "rbxassetid://4026367629",
+		Correcto = "rbxassetid://4094488012",
+	}
+	
+	-- Esperar al BindableEvent hasta que sea creado
+	local Notificacion = script.Parent:WaitForChild("Notificacion")
+	
+	if Notificacion:IsA("BindableEvent") then
+		-- Conectar el evento
+		Notificacion.Event:Connect(function(Titulo, Texto, Color, TipoDeNotificacion)
+			-- Crear una nueva GUI para la notificación
+			local NotificacionGUI = Instance.new("ScreenGui")
+			NotificacionGUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	
+			local Marco = Instance.new("Frame")
+			Marco.Size = UDim2.new(0, 300, 0, 100)
+			Marco.Position = UDim2.new(0.5, -150, 0.1, 0)
+			Marco.BackgroundColor3 = Color
+			Marco.Parent = NotificacionGUI
+	
+			local TituloTexto = Instance.new("TextLabel")
+			TituloTexto.Size = UDim2.new(0, 280, 0, 30)
+			TituloTexto.Position = UDim2.new(0, 10, 0, 10)
+			TituloTexto.Text = Titulo
+			TituloTexto.TextSize = 20
+			TituloTexto.Font = Enum.Font.SourceSansBold
+			TituloTexto.TextColor3 = Color3.new(1, 1, 1)
+			TituloTexto.Parent = Marco
+	
+			local CuerpoTexto = Instance.new("TextLabel")
+			CuerpoTexto.Size = UDim2.new(0, 280, 0, 50)
+			CuerpoTexto.Position = UDim2.new(0, 10, 0, 40)
+			CuerpoTexto.Text = Texto
+			CuerpoTexto.TextSize = 16
+			CuerpoTexto.Font = Enum.Font.SourceSans
+			CuerpoTexto.TextColor3 = Color3.new(1, 1, 1)
+			CuerpoTexto.TextWrapped = true
+			CuerpoTexto.Parent = Marco
+	
+			-- Reproducir sonido de notificación
+			local Sonido = Instance.new("Sound")
+			Sonido.SoundId = Notificaciones[TipoDeNotificacion] or "rbxassetid://0"
+			Sonido.Parent = Marco
+			Sonido:Play()
+	
+			-- Desaparecer la notificación después de unos segundos
+			task.wait(3)
+			NotificacionGUI:Destroy()
+		end)
+	end
+	
+end
+coroutine.wrap(TKZFXPL_script)()
+local function PNNFTHM_script() -- options.AnimationHandler 
+	local script = Instance.new('LocalScript', options)
+
+	-- Empezar oculto
+	script.Parent.Visible = false
+	
+	-- Definir posiciones de apertura y cierre
+	local Posicion_de_Abierto = UDim2.new(0, -267, 0, 265)
+	local Posicion_de_Cerrado = UDim2.new(0, -267, 0, 0) -- Agregado el valor faltante en Y
+	script.Parent.Size = Posicion_de_Cerrado
+	-- Obtener el evento de animación
+	local Animacion = script.Parent:FindFirstChild("Animacion")
+	
+	-- Verificar si `Animacion` es un `BindableEvent`
+	if not Animacion or not Animacion:IsA("BindableEvent") then
+		warn("⚠️ Error: 'Animacion' no es un BindableEvent o no existe.")
+		return
+	end
+	
+	local Animando = false
+	local Frame = script.Parent:FindFirstChild("Frame")
+	
+	-- Verificar que Frame exista
+	if not Frame then
+		warn("⚠️ Error: 'Frame' no encontrado en script.Parent.")
+		return
+	end
+	for _, boton in pairs(script.Parent.Frame:GetDescendants()) do
+	if boton:IsA("TextButton") then
+	boton.Transparency = 1
+	end
+	end
+	script.Parent.Frame.TextLabel.TextTransparency = 1
+	-- Función para animar la transparencia de los botones
+	local function AnimarBotones(transparency, duration)
+		for _, boton in ipairs(Frame:GetChildren()) do
+			if boton:IsA("TextButton") or boton:IsA("ImageButton") then
+				-- Usamos TweenService para hacer la animación suave
+				local TweenService = game:GetService("TweenService")
+				local info = TweenInfo.new(duration, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+				local properties = {BackgroundTransparency = transparency, TextTransparency = transparency}
+				local tween = TweenService:Create(boton, info, properties)
+				tween:Play()
+			end
+		end
+		local TweenService = game:GetService("TweenService")
+		local info = TweenInfo.new(duration, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+		local properties = {TextTransparency = transparency}
+		local tween = TweenService:Create(script.Parent.Frame.TextLabel, info, properties)
+		tween:Play()
+	end
+	
+	Animacion.Event:Connect(function(Posicion_de)
+		if Animando then return end
+		Animando = true
+	
+		if Posicion_de == "Cerrado" then
+			-- Ocultar los botones con animación antes de cerrar el menú
+			AnimarBotones(1, 0.5)
+			task.wait(0.5) -- Esperar a que la animación termine antes de cerrar el Frame
+	
+			-- Iniciar la animación de cierre
+			script.Parent:TweenSize(Posicion_de_Cerrado, Enum.EasingDirection.In, Enum.EasingStyle.Linear, 0.5, true, function()
+				Animando = false
+				script.Parent.Visible = false
+			end)
+		elseif Posicion_de == "Abierto" then
+			script.Parent.Visible = true
+			script.Parent:TweenSize(Posicion_de_Abierto, Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 0.5, true, function()
+				Animando = false
+				-- Mostrar los botones con animación después de abrir el Frame
+				AnimarBotones(0, 1)
+			end)
+		else
+			warn("⚠️ Error: Posicion_de inválida: " .. tostring(Posicion_de))
+			Animando = false
+		end
+	end)
+	
+end
+coroutine.wrap(PNNFTHM_script)()
+local function BABLTE_script() -- keyAL.LocalScript 
+	local script = Instance.new('LocalScript', keyAL)
+
+	local UserInputService = game:GetService("UserInputService")
+	local button = script.Parent -- El botón en la UI
+	local selectedKey = Enum.KeyCode.Unknown -- Variable para almacenar la tecla seleccionada
+	local selectingKey = false -- Estado de selección
+	local originalBGColor = button.BackgroundColor3 -- Guardar el color original del fondo
+	local originalTextStroke = button.TextStrokeColor3 -- Guardar el color original del contorno
+	local flashing = false -- Estado del parpadeo
+	
+	local keyValue = button:FindFirstChild("SelectedKey") or Instance.new("StringValue")
+	keyValue.Name = "SelectedKey"
+	keyValue.Parent = button
+	keyValue.Value = "Q" -- Valor por defecto
+	
+	-- Función para iniciar la selección de tecla
+	local function startKeySelection()
+		if selectingKey then return end -- Evita que el usuario seleccione varias veces al mismo tiempo
+		selectingKey = true
+		button.Text = "Presiona cualquier tecla..."
+		button.BackgroundColor3 = Color3.fromRGB(0, 100, 255) -- Azul
+		flashing = true
+	
+		-- Efecto de parpadeo del TextStrokeColor3
+		task.spawn(function()
+			while flashing do
+				button.TextStrokeColor3 = Color3.fromRGB(255, 255, 255) -- Blanco
+				wait(1)
+				button.TextStrokeColor3 = originalTextStroke -- Color original
+				wait(1)
+			end
+		end)
+	end
+	
+	
+	-- Función para capturar la tecla presionada
+	local function onInputBegan(input, gameProcessedEvent)
+		if selectingKey and not gameProcessedEvent then
+			if input.UserInputType == Enum.UserInputType.Keyboard then
+				selectedKey = input.KeyCode
+				local keyName = tostring(selectedKey.Name) -- Nombre de la tecla seleccionada
+				keyValue.Value = keyName -- Guardar en el StringValue
+				local Notificacion = script.Parent.Parent.Parent.Parent.Main:WaitForChild("Notificacion")
+				--Notificar sobre los cambios
+				if Notificacion:IsA("BindableEvent") then
+					Notificacion:Fire("Aim-lock: ", string.format([[Pulse la tecla "%s" De ahora en adelante.]], tostring(selectedKey.Name)) ,Color3.new(0, 0.666667, 0.501961), "Aviso")
+				end
+				button.Text = string.format("Tecla para Togglear Aim-Lock [Letra Actual - %s]", tostring(selectedKey.Name))
+				selectingKey = false
+				flashing = false -- Detener el parpadeo
+				button.BackgroundColor3 = originalBGColor -- Restaurar color original
+				button.TextStrokeColor3 = originalTextStroke -- Restaurar contorno original
+			end
+		end
+	end
+	
+	-- Conectar eventos
+	button.MouseButton1Click:Connect(startKeySelection)
+	UserInputService.InputBegan:Connect(onInputBegan)
+	
+end
+coroutine.wrap(BABLTE_script)()
+local function MURKX_script() -- KeyESP.LocalScript 
+	local script = Instance.new('LocalScript', KeyESP)
+
+	local UserInputService = game:GetService("UserInputService")
+	local button = script.Parent -- El botón en la UI
+	local selectedKey = Enum.KeyCode.Unknown -- Variable para almacenar la tecla seleccionada
+	local selectingKey = false -- Estado de selección
+	local originalBGColor = button.BackgroundColor3 -- Guardar el color original del fondo
+	local originalTextStroke = button.TextStrokeColor3 -- Guardar el color original del contorno
+	local flashing = false -- Estado del parpadeo
+	
+	
+	local keyValue = button:FindFirstChild("SelectedKey") or Instance.new("StringValue")
+	keyValue.Name = "SelectedKey"
+	keyValue.Parent = button
+	keyValue.Value = "E" -- Valor por defecto
+	
+	
+	-- Función para iniciar la selección de tecla
+	local function startKeySelection()
+		if selectingKey then return end -- Evita que el usuario seleccione varias veces al mismo tiempo
+		selectingKey = true
+		button.Text = "Presiona cualquier tecla..."
+		button.BackgroundColor3 = Color3.fromRGB(0, 100, 255) -- Azul
+		flashing = true
+	
+		-- Efecto de parpadeo del TextStrokeColor3
+		task.spawn(function()
+			while flashing do
+				button.TextStrokeColor3 = Color3.fromRGB(255, 255, 255) -- Blanco
+				wait(1)
+				button.TextStrokeColor3 = originalTextStroke -- Color original
+				wait(1)
+			end
+		end)
+	end
+	
+	-- Función para capturar la tecla presionada
+	local function onInputBegan(input, gameProcessedEvent)
+		if selectingKey and not gameProcessedEvent then
+			if input.UserInputType == Enum.UserInputType.Keyboard then
+				selectedKey = input.KeyCode
+				local keyName = tostring(selectedKey.Name) -- Nombre de la tecla seleccionada
+				local Notificacion = script.Parent.Parent.Parent.Parent.Main:WaitForChild("Notificacion")
+				--Notificar sobre los cambios
+				if Notificacion:IsA("BindableEvent") then
+					Notificacion:Fire("ESP: ", string.format([[Pulse la tecla "%s" De ahora en adelante.]], tostring(selectedKey.Name)) ,Color3.new(0, 0.666667, 0.501961), "Aviso")
+				end
+				keyValue.Value = keyName -- Guardar en el StringValue
+				button.Text = string.format("Tecla para Togglear ESP [Letra Actual - %s]", tostring(selectedKey.Name))
+				selectingKey = false
+				flashing = false -- Detener el parpadeo
+				button.BackgroundColor3 = originalBGColor -- Restaurar color original
+				button.TextStrokeColor3 = originalTextStroke -- Restaurar contorno original
+			end
+		end
+	end
+	
+	-- Conectar eventos
+	button.MouseButton1Click:Connect(startKeySelection)
+	UserInputService.InputBegan:Connect(onInputBegan)
+	
+end
+coroutine.wrap(MURKX_script)()
+local function VANRBFI_script() -- NT.LocalScript 
+	local script = Instance.new('LocalScript', NT)
+
+	local button = script.Parent -- Referencia al botón
+	
+	-- Crear el BoolValue dentro del botón si no existe
+	local toggleState = button:FindFirstChild("IsActive") or Instance.new("BoolValue")
+	toggleState.Name = "IsActive"
+	toggleState.Parent = button
+	toggleState.Value = true -- Estado inicial desactivado
+	
+	-- Función para alternar el estado del botón
+	local function toggle()
+		toggleState.Value = not toggleState.Value -- Alternar el valor
+	
+		button.BackgroundColor3 = toggleState.Value and Color3.fromRGB(71, 168, 64) or Color3.fromRGB(168, 61, 63) -- Verde si está activo, rojo si no
+	end
+	
+	-- Conectar la función al evento de clic
+	button.MouseButton1Click:Connect(function()
+	toggle()
+	
+		local Notificacion = script.Parent.Parent.Parent.Parent.Main:WaitForChild("Notificacion")
+		--Notificar sobre los cambios
+		if Notificacion:IsA("BindableEvent") then
+			Notificacion:Fire("Notificar TARGET: ", string.format([[ha sido cambiado a "%s"]], tostring(toggleState.Value)) ,Color3.new(0, 0.666667, 0.501961), "Aviso")
+		end
+		
+	end)
+	
+	-- Inicializar el color del botón según el estado
+	toggle()
+	
+end
+coroutine.wrap(VANRBFI_script)()
+local function BLKGJW_script() -- Ola.LocalScript 
+	local script = Instance.new('LocalScript', Ola)
+
+	local UserInputService = game:GetService("UserInputService")
+	local button = script.Parent -- El botón en la UI
+	local selectedKey = Enum.KeyCode.Unknown -- Variable para almacenar la tecla seleccionada
+	local selectingKey = false -- Estado de selección
+	local originalBGColor = button.BackgroundColor3 -- Guardar el color original del fondo
+	local originalTextStroke = button.TextStrokeColor3 -- Guardar el color original del contorno
+	local flashing = false -- Estado del parpadeo
+	
+	
+	local keyValue = button:FindFirstChild("SelectedKey") or Instance.new("StringValue")
+	keyValue.Name = "SelectedKey"
+	keyValue.Parent = button
+	keyValue.Value = "None" -- Valor por defecto
+	
+	
+	-- Función para iniciar la selección de tecla
+	local function startKeySelection()
+		if selectingKey then return end -- Evita que el usuario seleccione varias veces al mismo tiempo
+		selectingKey = true
+		button.Text = "Presiona cualquier tecla..."
+		button.BackgroundColor3 = Color3.fromRGB(0, 100, 255) -- Azul
+		flashing = true
+	
+		-- Efecto de parpadeo del TextStrokeColor3
+		task.spawn(function()
+			while flashing do
+				button.TextStrokeColor3 = Color3.fromRGB(255, 255, 255) -- Blanco
+				wait(1)
+				button.TextStrokeColor3 = originalTextStroke -- Color original
+				wait(1)
+			end
+		end)
+	end
+	
+	-- Función para capturar la tecla presionada
+	local function onInputBegan(input, gameProcessedEvent)
+		if selectingKey and not gameProcessedEvent then
+			if input.UserInputType == Enum.UserInputType.Keyboard then
+				selectedKey = input.KeyCode
+				local keyName = tostring(selectedKey.Name) -- Nombre de la tecla seleccionada
+				keyValue.Value = keyName -- Guardar en el StringValue
+				local Notificacion = script.Parent.Parent.Parent.Parent.Main:WaitForChild("Notificacion")
+				--Notificar sobre los cambios
+				if Notificacion:IsA("BindableEvent") then
+					Notificacion:Fire("Menu Toggle: ", string.format([[Pulse la tecla "%s" De ahora en adelante.]], tostring(selectedKey.Name)) ,Color3.new(0, 0.666667, 0.501961), "Aviso")
+				end
+				button.Text = string.format("Tecla para Togglear Menu [Letra Actual - %s]", tostring(selectedKey.Name))
+				selectingKey = false
+				flashing = false -- Detener el parpadeo
+				button.BackgroundColor3 = originalBGColor -- Restaurar color original
+				button.TextStrokeColor3 = originalTextStroke -- Restaurar contorno original
+			end
+		end
+	end
+	
+	-- Conectar eventos
+	button.MouseButton1Click:Connect(startKeySelection)
+	UserInputService.InputBegan:Connect(onInputBegan)
+	
+end
+coroutine.wrap(BLKGJW_script)()
+
