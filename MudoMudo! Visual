@@ -17,7 +17,7 @@ G2L["1"]["DisplayOrder"] = 2147483643;
 G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
 G2L["1"]["Name"] = [[mudo_visualz_sonned_u]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-
+G2L["1"]["ResetOnSpawn"] = false;
 
 -- StarterGui.mudo_visualz_sonned_u.Accessory Storage_Converted
 G2L["2"] = Instance.new("ModuleScript", G2L["1"]);
